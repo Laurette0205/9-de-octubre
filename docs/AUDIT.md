@@ -27,11 +27,10 @@ npm run screenshots                    # capturas 360 / 768 / 1440 → docs/scre
 | `backend` | CORS, cabeceras, rate limit, sanitización, ausencia de secretos |
 | `docs` | README y los ocho documentos de `docs/` |
 
-**Última ejecución: `PASS 98 · WARN 2 · FAIL 0`**
+**Última ejecución: `PASS 99 · WARN 1 · FAIL 0`**
 
 | Aviso | Motivo |
 | --- | --- |
-| `sin URL pública` | `seo.url` está vacío: no hay dominio de producción todavía. Fijar con `npm run publish:url -- <url>` antes de publicar. |
 | `peso de assets` | `12.9 MB` por encima del objetivo de 8 MB: incluye los 3 MP3 de Luis Miguel (~10.2 MB). El audio no se precachea ni se carga hasta que el usuario pulsa reproducir; si prefieres un peso menor, deja sólo la pista principal. |
 
 ## 2. Revisión fase por fase
@@ -189,13 +188,13 @@ verificado por script en cada captura):
    - Sin autoplay y `preload="none"`: el MP3 sólo se descarga al pulsar
      reproducir (verificado: respuesta `206 audio/mpeg`, duración 202.8 s).
    - El service worker precachea las imágenes (38 rutas) pero no el audio.
-   - Verificación: QA 68/68, `npm test` 18 + 29, audit `PASS 98 · FAIL 0`
+   - Verificación: QA 68/68, `npm test` 18 + 29, audit `PASS 99 · FAIL 0`
      (WARN esperado de peso por los MP3).
 
 ## 11. Pendientes antes de publicar
 
-1. Fijar el dominio: `npm run publish:url -- https://tu-dominio.com`
-   (o `seo.url` en `birthday.config.json`) y regenerar el fallback.
+1. ✔ URL pública fijada: `seo.url = https://laurette0205.github.io/9-de-octubre`
+   aplicada con `npm run publish:url`. Si cambias de dominio, repítelo.
 2. Desplegar con HTTPS (proxy inverso) y `backend/.env`:
    `ALLOWED_ORIGINS=https://tu-dominio.com`, `FORCE_HTTPS=true`.
 3. Releer [`CHECKLISTS.md`](CHECKLISTS.md): quedan elementos que sólo se pueden

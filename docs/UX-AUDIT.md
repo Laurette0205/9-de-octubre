@@ -1,7 +1,7 @@
 # Auditoría senior de frontend / UX / UI / motion
 
 Fecha: 2026-10-07 · Alcance: `dist/` servido por `npm run preview` (`http://localhost:4173`),
-auditoría estática `npm run audit`, QA de navegador (67 checks), capturas responsive y lectura de fuente.
+auditoría estática `npm run audit`, QA de navegador (68 checks), capturas responsive y lectura de fuente.
 
 Leyenda de veredictos: **BIEN** · **REGULAR** · **MAL** · **FALTA** · **MEJORAR** · **ELIMINAR**.
 

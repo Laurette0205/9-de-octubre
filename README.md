@@ -76,22 +76,14 @@ npm run build && npm test && npm run audit
 # 2. Publicar dist/
 ```
 
-**GitHub Pages (Actions)** — `Settings → Pages → Source: GitHub Actions`:
+**GitHub Pages (Actions)** — workflow listo en `.github/workflows/deploy.yml`:
+`Settings → Pages → Source: GitHub Actions`, y cada push a `main` compila
+(`npm ci` + Pillow), ejecuta `npm run audit` y `npm run test:frontend`, y
+despliega `dist/` con `actions/deploy-pages`.
 
-```yaml
-# .github/workflows/pages.yml (esqueleto)
-on: { push: { branches: [main] } }
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with: { node-version: 20 }
-      - run: npm ci && npm run build
-      - uses: actions/upload-pages-artifact@v3
-        with: { path: dist }
-      - uses: actions/deploy-pages@v4
+```bash
+gh repo create 9-de-octubre --public --source . --push
+gh api --method POST repos/{owner}/9-de-octubre/pages -f build_type=workflow
 ```
 
 **Netlify** (archivo `netlify.toml` o panel):
