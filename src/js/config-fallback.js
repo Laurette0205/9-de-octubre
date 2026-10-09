@@ -158,9 +158,9 @@ export default {
       "id": "galeria",
       "index": "05",
       "title": "Galería de recuerdos",
-      "subtitle": "Momentos que merecen quedarse. Añade tus fotos en birthday.config.json.",
-      "emptyTitle": "Aún no hay fotos aquí",
-      "emptyText": "Edita la sección \"gallery.images\" de birthday.config.json para mostrar tus imágenes en esta galería.",
+      "subtitle": "Momentos que merecen quedarse.",
+      "emptyTitle": "Muy pronto verás algo aquí",
+      "emptyText": "Estamos reuniendo los mejores momentos para mostrártelos.",
       "categories": [
         "Todas",
         "Cumpleaños",
