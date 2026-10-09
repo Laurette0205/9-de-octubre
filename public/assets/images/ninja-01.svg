@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" width="960" height="720" role="img" aria-label="Ilustración original de la escena ninja">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0a0f1a"/>
+    </linearGradient>
+    <linearGradient id="ridge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#16203a"/>
+      <stop offset="100%" stop-color="#0d1424"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="720" fill="url(#sky)"/>
+  <circle cx="700" cy="190" r="110" fill="#e8d5b7" opacity="0.92"/>
+  <circle cx="742" cy="160" r="110" fill="#0a0f1a"/>
+  <circle cx="700" cy="190" r="150" fill="none" stroke="#c9a84c" stroke-opacity="0.35" stroke-width="2"/>
+  <path d="M0 560 L180 430 L330 540 L520 380 L700 520 L960 400 L960 720 L0 720 Z" fill="url(#ridge)"/>
+  <path d="M0 640 L240 540 L470 630 L720 520 L960 610 L960 720 L0 720 Z" fill="#080d17"/>
+  <g fill="#f5f0e8" opacity="0.9">
+    <path d="M470 300 q22 -34 44 0 l10 120 q-32 22 -64 0 Z"/>
+    <path d="M466 420 l68 0 16 150 -34 0 -16 -96 -18 96 -34 0 Z"/>
+    <path d="M508 330 l84 -26 6 16 -84 30 Z"/>
+  </g>
+  <path d="M520 300 l120 -110 14 12 -108 116 Z" fill="#c9a84c" opacity="0.85"/>
+  <g fill="#e8d5b7" opacity="0.5"><circle cx="140" cy="120" r="3"/><circle cx="240" cy="200" r="2"/><circle cx="330" cy="90" r="2.5"/><circle cx="880" cy="330" r="2.5"/><circle cx="620" cy="70" r="2"/><circle cx="60" cy="300" r="2"/></g>
+</svg>

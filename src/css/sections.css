@@ -1,0 +1,746 @@
+/*
+ * sections.css
+ * Estilos propios de cada escena de la experiencia.
+ * Generado a partir del diseño de la v1; mantener el orden de carga.
+ */
+.split__note {
+  margin-top: var(--spacing-6);
+  font-size: var(--font-size-sm);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  color: var(--color-text-accent);
+  line-height: var(--line-height-relaxed);
+}
+
+/* --------------------------------------------------------------------------
+   Modo lectura: simplifica lo decorativo sin quitar contenido
+   -------------------------------------------------------------------------- */
+[data-reading-mode="true"] .hero__canvas,
+[data-reading-mode="true"] .hero__glow,
+[data-reading-mode="true"] .ninja__bg,
+[data-reading-mode="true"] .stage__lights,
+[data-reading-mode="true"] .hero__scroll,
+/* ==========================================================================
+   Secciones: portada, gran día, deseos, camino ninja, noche de estrellas,
+   galería y momento sorpresa.
+   ========================================================================== */
+/* --------------------------------------------------------------------------
+   Secciones cinematográficas: siempre en paleta nocturna, en cualquier tema
+   -------------------------------------------------------------------------- */
+.hero,
+.section--ninja,
+.section--stage {
+  --color-bg-primary: #0a0f1a;
+  --color-bg-secondary: #111827;
+  --color-bg-tertiary: #1a1f2e;
+  --color-bg-card: #2d3342;
+  --color-bg-hover: rgba(45, 51, 66, 0.9);
+  --color-text-primary: #f5f0e8;
+  --color-text-secondary: rgba(245, 240, 232, 0.85);
+  --color-text-muted: rgba(245, 240, 232, 0.7);
+  --color-text-accent: #d9bd6a;
+  --color-text-champagne: #e8d5b7;
+  --color-border-subtle: rgba(201, 168, 76, 0.28);
+  --color-border-medium: rgba(201, 168, 76, 0.5);
+  color: var(--color-text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   01 · Portada
+   -------------------------------------------------------------------------- */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(88px + var(--spacing-12)) 0 var(--spacing-24);
+  overflow: hidden;
+  background:
+    radial-gradient(70% 55% at 50% 8%, rgba(59, 130, 246, 0.16), transparent 70%),
+    radial-gradient(90% 60% at 50% 110%, rgba(201, 168, 76, 0.18), transparent 65%),
+    linear-gradient(180deg, #070b14 0%, var(--color-night-blue) 45%, var(--color-navy-blue) 100%);
+}
+
+.hero__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.hero__glow {
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  width: min(680px, 90vw);
+  height: min(680px, 90vw);
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(201, 168, 76, 0.18) 0%, transparent 62%);
+  filter: blur(8px);
+  pointer-events: none;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--spacing-5);
+}
+
+.hero__date {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: var(--color-text-accent);
+}
+
+.hero__date::before,
+.hero__date::after {
+  content: "";
+  width: clamp(28px, 8vw, 72px);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-elegant-gold));
+}
+
+.hero__date::after {
+  background: linear-gradient(90deg, var(--color-elegant-gold), transparent);
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 8vw, 5.5rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.04;
+  background: linear-gradient(120deg, var(--color-warm-white) 0%, var(--color-champagne) 45%, var(--color-elegant-gold) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--color-warm-white);
+}
+
+.hero__name:empty {
+  display: none;
+}
+
+.hero__name {
+  font-size: clamp(1.25rem, 3.4vw, 2rem);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--color-text-champagne);
+}
+
+.hero__lead {
+  max-width: 44ch;
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+  text-wrap: balance;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-4);
+  margin-top: var(--spacing-2);
+}
+
+.hero__tagline {
+  margin-top: var(--spacing-4);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+}
+
+.hero__scroll {
+  position: absolute;
+  bottom: var(--spacing-6);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-3);
+  text-decoration: none;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.hero__scroll-line {
+  width: 1px;
+  height: 44px;
+  background: linear-gradient(180deg, var(--color-elegant-gold), transparent);
+  animation: pulse-soft 2.6s var(--ease-in-out) infinite;
+}
+
+.hero__scroll:hover {
+  color: var(--color-text-accent);
+}
+
+/* --------------------------------------------------------------------------
+   02 · El gran día
+   -------------------------------------------------------------------------- */
+.section--intro .prose {
+  text-align: center;
+}
+
+.section--intro .prose p {
+  max-width: 60ch;
+  margin: 0 auto;
+}
+
+.section--intro {
+  background:
+    radial-gradient(60% 50% at 15% 0%, rgba(201, 168, 76, 0.08), transparent 60%),
+    var(--color-bg-primary);
+}
+
+/* --------------------------------------------------------------------------
+   03 · Deseos
+   -------------------------------------------------------------------------- */
+.section--wishes {
+  background:
+    radial-gradient(70% 60% at 85% 20%, rgba(59, 130, 246, 0.1), transparent 60%),
+    linear-gradient(180deg, var(--color-bg-secondary), var(--color-bg-primary));
+}
+
+.wishes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--spacing-5);
+}
+
+.wish-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  padding: var(--spacing-7) var(--spacing-6);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-xl);
+  background: var(--color-bg-card);
+  transition: transform var(--transition-normal) var(--ease-out),
+              border-color var(--transition-normal),
+              box-shadow var(--transition-normal);
+}
+
+.wish-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: var(--spacing-6);
+  right: var(--spacing-6);
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-elegant-gold), transparent);
+  opacity: 0.65;
+}
+
+.wish-card:hover,
+.wish-card:focus-within {
+  transform: translateY(-6px);
+  border-color: var(--color-border-medium);
+  box-shadow: var(--shadow-lg);
+}
+
+.wish-card__index {
+  font-family: var(--font-display);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-accent);
+  letter-spacing: 0.2em;
+}
+
+.wish-card__text {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   04 · Camino ninja
+   -------------------------------------------------------------------------- */
+.section--ninja {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(55% 60% at 78% 30%, rgba(201, 168, 76, 0.12), transparent 62%),
+    radial-gradient(50% 50% at 10% 85%, rgba(59, 130, 246, 0.14), transparent 65%),
+    linear-gradient(180deg, #060a13, #0c1220 60%, #080d17);
+}
+
+.ninja__bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(115deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 44px);
+  mask-image: radial-gradient(75% 65% at 50% 45%, #000 25%, transparent 85%);
+  pointer-events: none;
+}
+
+.section--stage {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(45% 55% at 50% 0%, rgba(201, 168, 76, 0.2), transparent 65%),
+    radial-gradient(60% 55% at 20% 100%, rgba(59, 130, 246, 0.16), transparent 60%),
+    linear-gradient(180deg, #050810, var(--color-night-blue) 55%, #0b111d);
+}
+
+.stage__lights {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    conic-gradient(from 200deg at 18% -10%, transparent 0deg, rgba(232, 213, 183, 0.16) 12deg, transparent 26deg),
+    conic-gradient(from 160deg at 82% -10%, transparent 0deg, rgba(59, 130, 246, 0.14) 12deg, transparent 26deg);
+  mask-image: linear-gradient(180deg, #000 0%, transparent 72%);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-10);
+  align-items: center;
+}
+
+.split__media {
+  position: relative;
+  margin: 0;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  border: 1px solid var(--color-border-subtle);
+  box-shadow: var(--shadow-2xl);
+  background: var(--color-bg-tertiary);
+  transform: translate3d(0, var(--parallax, 0px), 0);
+  will-change: transform;
+}
+
+.split__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(5, 8, 16, 0.55));
+  pointer-events: none;
+}
+
+.split__media img {
+  width: 100%;
+  height: auto;
+}
+
+.split__body {
+  min-width: 0;
+}
+
+.stage__cta {
+  margin-top: var(--spacing-8);
+}
+
+/* --------------------------------------------------------------------------
+   06 · Galería
+   -------------------------------------------------------------------------- */
+.section--gallery {
+  background: linear-gradient(180deg, var(--color-bg-primary), var(--color-bg-secondary));
+}
+
+.gallery-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-10);
+}
+
+.gallery-filters .chip-toggle[aria-pressed="true"] {
+  background: var(--color-elegant-gold);
+  border-color: var(--color-elegant-gold);
+  color: var(--color-night-blue);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
+  gap: var(--spacing-5);
+}
+
+.gallery-item {
+  position: relative;
+  display: block;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--color-border-subtle);
+  background: var(--color-bg-tertiary);
+  transition: transform var(--transition-normal) var(--ease-out), border-color var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.gallery-item:hover,
+.gallery-item:focus-within {
+  transform: translateY(-6px);
+  border-color: var(--color-border-medium);
+  box-shadow: var(--shadow-lg);
+}
+
+.gallery-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: linear-gradient(135deg, var(--color-graphite), var(--color-charcoal));
+  transition: transform var(--transition-slow) var(--ease-out);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.04);
+}
+
+.gallery-item figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  padding: var(--spacing-4) var(--spacing-5) var(--spacing-5);
+}
+
+.gallery-item__title {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+.gallery-item__category {
+  font-size: var(--font-size-xs);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  color: var(--color-text-accent);
+}
+
+/* --------------------------------------------------------------------------
+   07 · Momento sorpresa
+   -------------------------------------------------------------------------- */
+.section--surprise {
+  background:
+    radial-gradient(55% 60% at 50% 50%, rgba(201, 168, 76, 0.14), transparent 65%),
+    var(--color-bg-primary);
+}
+
+.surprise {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-6);
+  text-align: center;
+}
+
+.surprise__text {
+  font-family: var(--font-display);
+  font-size: var(--font-size-xl);
+  color: var(--color-text-secondary);
+}
+
+[data-reduced-motion="true"] .split__media {
+  transform: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   Escena 03 · tira de tres láminas ninja
+   -------------------------------------------------------------------------- */
+.ninja-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--spacing-5);
+  margin-bottom: var(--spacing-12);
+}
+
+.ninja-strip__card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-xl);
+  background: var(--color-bg-card);
+  transition: transform var(--transition-normal) var(--ease-out),
+              border-color var(--transition-normal),
+              box-shadow var(--transition-normal);
+}
+
+.ninja-strip__card:hover,
+.ninja-strip__card:focus-within {
+  transform: translateY(-6px);
+  border-color: var(--color-border-medium);
+  box-shadow: var(--shadow-gold);
+}
+
+.ninja-strip__card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.ninja-strip__caption {
+  padding: var(--spacing-4) var(--spacing-5);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.split__body--wide {
+  grid-column: 1 / -1;
+}
+
+/* --------------------------------------------------------------------------
+   Escena 04 · tu nuevo capítulo
+   -------------------------------------------------------------------------- */
+.section--chapter {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(60% 70% at 50% 40%, rgba(59, 130, 246, 0.12), transparent 65%),
+    linear-gradient(180deg, var(--color-bg-primary), var(--color-bg-secondary));
+}
+
+.chapter__glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(720px, 120vw);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(201, 168, 76, 0.18), transparent 60%);
+  pointer-events: none;
+}
+
+.section--chapter .countdown {
+  margin: 0 auto;
+}
+
+.countdown--xl {
+  width: min(760px, 100%);
+  padding: var(--spacing-8) var(--spacing-6);
+}
+
+.countdown--xl .countdown__value {
+  font-size: clamp(2.2rem, 7vw, 3.6rem);
+}
+
+.chapter__note {
+  margin-top: var(--spacing-8);
+  text-align: center;
+  font-size: var(--font-size-md);
+  color: var(--color-text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   Escena 05 · recuerdos en 3D
+   -------------------------------------------------------------------------- */
+.section--memories {
+  background:
+    radial-gradient(70% 60% at 15% 25%, rgba(201, 168, 76, 0.1), transparent 60%),
+    var(--color-bg-primary);
+}
+
+.memory-stage {
+  position: relative;
+  perspective: 1400px;
+  min-height: 420px;
+  margin-bottom: var(--spacing-8);
+}
+
+.memory-track {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 420px;
+  list-style: none;
+}
+
+.memory-card {
+  grid-area: 1 / 1;
+  width: min(560px, 100%);
+  padding: var(--spacing-6);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-2xl);
+  background:
+    radial-gradient(120% 80% at 50% -20%, rgba(201, 168, 76, 0.14), transparent 60%),
+    var(--color-bg-card);
+  box-shadow: var(--shadow-xl);
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 520ms var(--ease-spring), opacity 420ms var(--ease-out),
+              filter 420ms var(--ease-out);
+}
+
+.memory-card[hidden] {
+  display: none;
+}
+
+.memory-card.is-active {
+  animation: memory-swap 520ms var(--ease-out) both;
+  transform: rotateY(0deg) translateZ(0);
+}
+
+.memory-card.is-prev {
+  transform: rotateY(26deg) translateX(-42%) scale(0.9);
+  opacity: 0.45;
+  filter: saturate(0.7);
+}
+
+.memory-card.is-next {
+  transform: rotateY(-26deg) translateX(42%) scale(0.9);
+  opacity: 0.45;
+  filter: saturate(0.7);
+}
+
+.memory-card.is-hidden {
+  opacity: 0;
+  transform: scale(0.86);
+  pointer-events: none;
+}
+
+.memory-card__media {
+  overflow: hidden;
+  margin: 0 0 var(--spacing-5);
+  border-radius: var(--radius-lg);
+}
+
+.memory-card__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.memory-card__date {
+  display: inline-block;
+  margin-bottom: var(--spacing-3);
+  font-size: var(--font-size-xs);
+  letter-spacing: var(--letter-spacing-wider);
+  text-transform: uppercase;
+  color: var(--color-text-accent);
+}
+
+.memory-card__title {
+  margin-bottom: var(--spacing-3);
+  font-family: var(--font-display);
+  font-size: var(--font-size-2xl);
+  color: var(--color-text-primary);
+}
+
+.memory-card__text {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+}
+
+.memory-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-5);
+}
+
+.memory-counter {
+  min-width: 84px;
+  text-align: center;
+  font-size: var(--font-size-sm);
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.memory-stage.is-dragging {
+  cursor: grabbing;
+}
+
+/* --------------------------------------------------------------------------
+   Escena 07 · ascuas de fondo
+   -------------------------------------------------------------------------- */
+.section--wishes {
+  position: relative;
+  overflow: hidden;
+}
+
+.wishes__embers {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   Escena 08 · pista en escena
+   -------------------------------------------------------------------------- */
+.stage__now {
+  margin-bottom: var(--spacing-4);
+  font-family: var(--font-display);
+  font-size: var(--font-size-xl);
+  color: var(--color-text-champagne);
+}
+
+/* --------------------------------------------------------------------------
+   Escena 09 · sorpresa final
+   -------------------------------------------------------------------------- */
+.section--final {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  background:
+    radial-gradient(70% 70% at 50% 35%, rgba(201, 168, 76, 0.16), transparent 62%),
+    linear-gradient(180deg, var(--color-bg-secondary), var(--color-bg-primary));
+}
+
+.final__burst {
+  position: absolute;
+  top: 32%;
+  left: 50%;
+  width: min(560px, 110vw);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.final__burst::before,
+.final__burst::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(201, 168, 76, 0.55);
+}
+
+.final__inner {
+  position: relative;
+}
+
+.final__text {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+}
+
+.final__wish {
+  margin-top: var(--spacing-5);
+  font-family: var(--font-display);
+  font-size: var(--font-size-2xl);
+  line-height: var(--line-height-snug);
+  color: var(--color-text-champagne);
+}
+
+.final__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-4);
+  margin-top: var(--spacing-10);
+}

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Brindis con dos copas y partículas doradas">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#05080f"/>
+      <stop offset="60%" stop-color="#0c1526"/>
+      <stop offset="100%" stop-color="#17273f"/>
+    </linearGradient>
+    <linearGradient id="glass5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5f0e8" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#c9a84c" stop-opacity="0.5"/>
+    </linearGradient>
+    <radialGradient id="glow5" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c9a84c" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg5)"/>
+  <circle cx="400" cy="270" r="240" fill="url(#glow5)"/>
+  <g stroke="url(#glass5)" stroke-width="7" fill="#c9a84c" fill-opacity="0.14">
+    <path d="M286 140 L374 140 L346 268 C344 282 316 282 314 268 Z"/>
+    <rect x="325" y="276" width="10" height="96" rx="4"/>
+    <ellipse cx="330" cy="384" rx="52" ry="14"/>
+  </g>
+  <g stroke="url(#glass5)" stroke-width="7" fill="#3b82f6" fill-opacity="0.12">
+    <path d="M426 140 L514 140 L486 268 C484 282 456 282 454 268 Z"/>
+    <rect x="465" y="276" width="10" height="96" rx="4"/>
+    <ellipse cx="470" cy="384" rx="52" ry="14"/>
+  </g>
+  <path d="M374 140 L426 140" stroke="#e8d5b7" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+  <g fill="#c9a84c">
+    <circle cx="250" cy="200" r="5" opacity="0.8"/>
+    <circle cx="556" cy="176" r="4" opacity="0.7"/>
+    <circle cx="600" cy="300" r="6" opacity="0.55"/>
+    <circle cx="206" cy="330" r="4" opacity="0.6"/>
+    <circle cx="520" cy="440" r="5" opacity="0.5"/>
+    <circle cx="270" cy="452" r="3" opacity="0.6"/>
+    <circle cx="640" cy="420" r="3" opacity="0.5"/>
+    <circle cx="160" cy="126" r="3" opacity="0.6"/>
+  </g>
+  <rect x="150" y="396" width="500" height="10" rx="5" fill="#0b1424"/>
+  <text x="400" y="510" text-anchor="middle" font-family="Georgia, serif" font-size="40" fill="#e8d5b7">Salud por lo que viene</text>
+</svg>

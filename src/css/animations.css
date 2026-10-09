@@ -1,0 +1,496 @@
+/*
+ * animations.css
+ * Keyframes, revelado por scroll y movimiento reducido.
+ * Generado a partir del diseño de la v1; mantener el orden de carga.
+ */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast: 0ms;
+    --transition-normal: 0ms;
+    --transition-slow: 0ms;
+    --transition-slower: 0ms;
+    --transition-spring: 0ms;
+    --duration-instant: 0ms;
+    --duration-fast: 0ms;
+    --duration-normal: 0ms;
+    --duration-slow: 0ms;
+    --duration-slower: 0ms;
+    --duration-slowest: 0ms;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-right {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scale-out {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes pulse-gold {
+  0%, 100% {
+    box-shadow: var(--shadow-gold);
+  }
+  50% {
+    box-shadow: var(--shadow-gold-lg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes rotate-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes confetti-fall {
+  0% {
+    opacity: 1;
+    transform: translateY(-100vh) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100vh) rotate(720deg);
+  }
+}
+
+@keyframes particle-drift {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(var(--tx1), var(--ty1)) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--tx2), var(--ty2)) scale(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in var(--transition-slow) var(--ease-out) forwards;
+}
+
+.animate-fade-out {
+  animation: fade-out var(--transition-slow) var(--ease-in) forwards;
+}
+
+.animate-slide-up {
+  animation: slide-up var(--transition-slower) var(--ease-out) forwards;
+}
+
+.animate-slide-down {
+  animation: slide-down var(--transition-slower) var(--ease-out) forwards;
+}
+
+.animate-slide-left {
+  animation: slide-left var(--transition-slower) var(--ease-out) forwards;
+}
+
+.animate-slide-right {
+  animation: slide-right var(--transition-slower) var(--ease-out) forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in var(--transition-slower) var(--ease-spring) forwards;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 3s var(--ease-in-out) infinite;
+}
+
+.animate-pulse-gold {
+  animation: pulse-gold 3s var(--ease-in-out) infinite;
+}
+
+.animate-float {
+  animation: float 6s var(--ease-in-out) infinite;
+}
+
+.animate-rotate-slow {
+  animation: rotate-slow 20s linear infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.stagger-1 { animation-delay: 100ms; }
+
+.stagger-2 { animation-delay: 200ms; }
+
+.stagger-3 { animation-delay: 300ms; }
+
+.stagger-4 { animation-delay: 400ms; }
+
+.stagger-5 { animation-delay: 500ms; }
+
+.stagger-6 { animation-delay: 600ms; }
+
+.stagger-7 { animation-delay: 700ms; }
+
+.stagger-8 { animation-delay: 800ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in,
+  .animate-fade-out,
+  .animate-slide-up,
+  .animate-slide-down,
+  .animate-slide-left,
+  .animate-slide-right,
+  .animate-scale-in,
+  .animate-pulse-soft,
+  .animate-pulse-gold,
+  .animate-float,
+  .animate-rotate-slow,
+  .animate-shimmer {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+[data-reduced-motion="true"] .animate-fade-in,
+[data-reduced-motion="true"] .animate-fade-out,
+[data-reduced-motion="true"] .animate-slide-up,
+[data-reduced-motion="true"] .animate-slide-down,
+[data-reduced-motion="true"] .animate-slide-left,
+[data-reduced-motion="true"] .animate-slide-right,
+[data-reduced-motion="true"] .animate-scale-in,
+[data-reduced-motion="true"] .animate-pulse-soft,
+[data-reduced-motion="true"] .animate-pulse-gold,
+[data-reduced-motion="true"] .animate-float,
+[data-reduced-motion="true"] .animate-rotate-slow,
+[data-reduced-motion="true"] .animate-shimmer {
+  animation: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation: none;
+    border-top-color: var(--color-elegant-gold);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .letter__body p.is-in {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .split__media {
+    transform: none !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Revelado por scroll (.reveal): el estado oculto sólo se activa cuando el
+   módulo reveal.js confirma que JS está listo, para no romper la lectura
+   si el script no llega a ejecutarse.
+   -------------------------------------------------------------------------- */
+html[data-reveal-ready] .reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 700ms var(--ease-out), transform 700ms var(--ease-out);
+}
+
+html[data-reveal-ready] .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-reveal-ready] .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+[data-reduced-motion="true"] .reveal {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   Escena 01 · puerta de entrada
+   -------------------------------------------------------------------------- */
+@keyframes gate-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes gate-rise-in {
+  from { opacity: 0; transform: translateY(30px); filter: blur(6px); }
+  to { opacity: 1; transform: none; filter: none; }
+}
+
+@keyframes gate-title-in {
+  from { opacity: 0; transform: translateY(34px) scale(0.97); letter-spacing: 0.4em; }
+  to { opacity: 1; transform: none; letter-spacing: var(--gate-title-tracking, 0.18em); }
+}
+
+@keyframes gate-leave {
+  0% { opacity: 1; transform: none; }
+  100% { opacity: 0; transform: scale(1.08); visibility: hidden; }
+}
+
+@keyframes ember-drift {
+  0% { transform: translate3d(0, 12vh, 0) scale(0.6); opacity: 0; }
+  25% { opacity: 0.9; }
+  100% { transform: translate3d(24px, -105vh, 0) scale(1.1); opacity: 0; }
+}
+
+.intro-gate {
+  animation: gate-fade-in 700ms var(--ease-out) both;
+}
+
+.intro-gate.is-leaving {
+  animation: gate-leave 720ms var(--ease-out) forwards;
+  pointer-events: none;
+}
+
+.intro-gate__kicker {
+  animation: gate-rise-in 700ms 120ms var(--ease-out) both;
+}
+
+.intro-gate__title {
+  animation: gate-title-in 1000ms 260ms var(--ease-out) both;
+}
+
+.intro-gate__name {
+  animation: gate-rise-in 700ms 520ms var(--ease-out) both;
+}
+
+.intro-gate__cta {
+  animation: gate-rise-in 700ms 700ms var(--ease-out) both;
+}
+
+.intro-gate__hint {
+  animation: gate-fade-in 700ms 1000ms var(--ease-out) both;
+}
+
+/* --------------------------------------------------------------------------
+   Escena 06 · revelado progresivo de la carta
+   -------------------------------------------------------------------------- */
+@keyframes letter-line-in {
+  0% { opacity: 0; transform: translateY(16px); filter: blur(4px); }
+  100% { opacity: 1; transform: none; filter: none; }
+}
+
+/* --------------------------------------------------------------------------
+   Escena 07 · ascuas detrás de las frases
+   -------------------------------------------------------------------------- */
+@keyframes wishes-glow {
+  0%, 100% { opacity: 0.5; transform: translateY(0); }
+  50% { opacity: 0.85; transform: translateY(-18px); }
+}
+
+.wishes__embers span {
+  position: absolute;
+  bottom: -8%;
+  width: 7px;
+  height: 7px;
+  border-radius: var(--radius-full);
+  background: radial-gradient(circle, var(--color-elegant-gold), rgba(201, 168, 76, 0));
+  animation: ember-drift linear infinite;
+}
+
+/* --------------------------------------------------------------------------
+   Escena 05 · tarjetas de recuerdo en 3D
+   -------------------------------------------------------------------------- */
+@keyframes memory-swap {
+  0% { opacity: 0; transform: translateX(var(--memory-from, 60px)) rotateY(-12deg) scale(0.96); }
+  100% { opacity: 1; transform: none; }
+}
+
+/* --------------------------------------------------------------------------
+   Escena 09 · broche final
+   -------------------------------------------------------------------------- */
+@keyframes burst-ring {
+  0% { transform: scale(0.55); opacity: 0.7; }
+  100% { transform: scale(1.7); opacity: 0; }
+}
+
+.final__burst::before,
+.final__burst::after {
+  animation: burst-ring 5.5s var(--ease-out) infinite;
+}
+
+.final__burst::after {
+  animation-delay: 1.8s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro-gate,
+  .intro-gate__kicker,
+  .intro-gate__title,
+  .intro-gate__name,
+  .intro-gate__cta,
+  .intro-gate__hint,
+  .final__burst::before,
+  .final__burst::after,
+  .wishes__embers span {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+
+  .intro-gate.is-leaving {
+    animation: gate-fade-in 200ms linear reverse both !important;
+  }
+}

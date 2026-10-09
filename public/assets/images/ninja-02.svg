@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" width="960" height="720" role="img" aria-label="Ilustración original de la escena ninja">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0a0f1a"/>
+    </linearGradient>
+    <linearGradient id="ridge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#16203a"/>
+      <stop offset="100%" stop-color="#0d1424"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="720" fill="url(#sky)"/>
+  <path d="M60 130 L560 84" stroke="#c9a84c" stroke-width="3" stroke-linecap="round" opacity="0.18"/>
+  <path d="M86 188 L594 142" stroke="#3b82f6" stroke-width="4" stroke-linecap="round" opacity="0.30"/>
+  <path d="M112 246 L628 200" stroke="#c9a84c" stroke-width="5" stroke-linecap="round" opacity="0.42"/>
+  <path d="M138 304 L662 258" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" opacity="0.18"/>
+  <path d="M164 362 L696 316" stroke="#c9a84c" stroke-width="4" stroke-linecap="round" opacity="0.30"/>
+  <path d="M190 420 L730 374" stroke="#3b82f6" stroke-width="5" stroke-linecap="round" opacity="0.42"/>
+  <path d="M216 478 L764 432" stroke="#c9a84c" stroke-width="3" stroke-linecap="round" opacity="0.18"/>
+  <path d="M242 536 L798 490" stroke="#3b82f6" stroke-width="4" stroke-linecap="round" opacity="0.30"/>
+  <path d="M268 594 L832 548" stroke="#c9a84c" stroke-width="5" stroke-linecap="round" opacity="0.42"/>
+  <path d="M470 330 q34 -46 74 0 l14 132 q-46 30 -102 0 Z" fill="#f5f0e8" opacity="0.92"/>
+  <path d="M470 470 l146 0 26 148 -58 0 -34 -104 -30 104 -56 0 Z" fill="#f5f0e8" opacity="0.92"/>
+  <path d="M470 470 L300 560 L320 596 L486 512 Z" fill="#c9a84c" opacity="0.75"/>
+  <path d="M0 660 L960 660 L960 720 L0 720 Z" fill="#080d17"/>
+</svg>

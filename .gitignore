@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Entorno
+.env
+backend/.env
+
+# Datos locales de la API
+backend/data/
+*.db
+
+# Generados en tiempo de ejecución
+*.log
+
+# Sistema / editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Build (se genera en CI)
+dist/

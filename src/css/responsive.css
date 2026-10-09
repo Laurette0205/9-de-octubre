@@ -1,0 +1,260 @@
+/*
+ * responsive.css
+ * Media queries: móvil primero, escritorio progresivo.
+ * Generado a partir del diseño de la v1; mantener el orden de carga.
+ */
+@media (min-width: 768px) {
+  .container {
+    padding: 0 var(--spacing-8);
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding: 0 var(--spacing-10);
+  }
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: var(--spacing-24) 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: var(--spacing-32) 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: var(--font-size-4xl);
+  }
+}
+
+@media (min-width: 640px) {
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Responsive: navegación móvil
+   -------------------------------------------------------------------------- */
+@media (max-width: 1023px) {
+  .site-nav__toggle {
+    display: inline-flex;
+  }
+
+  .site-nav__menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--spacing-2);
+    padding: var(--spacing-4) var(--spacing-6) var(--spacing-6);
+    background: var(--color-bg-secondary);
+    border-bottom: 1px solid var(--color-border-medium);
+    box-shadow: var(--shadow-xl);
+    display: none;
+  }
+
+  .site-nav__menu.is-open {
+    display: flex;
+    animation: slide-down var(--transition-normal) var(--ease-out) both;
+  }
+
+  .site-nav__list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--spacing-1);
+  }
+
+  .site-nav__link {
+    padding: var(--spacing-4);
+    font-size: var(--font-size-md);
+    min-height: 48px;
+  }
+
+  .site-nav__a11y {
+    width: 100%;
+    justify-content: center;
+    min-height: 52px;
+  }
+}
+
+@media (max-width: 480px) {
+  .music-player {
+    gap: var(--spacing-2);
+    padding: var(--spacing-2) var(--spacing-3);
+  }
+
+  .music-player__title,
+  .music-player__volume {
+    display: none;
+  }
+
+  .letter {
+    padding: var(--spacing-10) var(--spacing-5) var(--spacing-6);
+  }
+
+  .intro-gate .intro-gate__cta {
+    padding-inline: var(--spacing-6);
+  }
+}
+
+@media (max-width: 360px) {
+  .intro-gate .intro-gate__title {
+    --gate-title-tracking: 0.08em;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (min-width: 900px) {
+  .split {
+    grid-template-columns: 1.05fr 1fr;
+    gap: var(--spacing-16);
+  }
+
+  .split--reverse .split__media {
+    order: 2;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Responsive global de secciones
+   -------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .hero {
+    padding-top: calc(84px + var(--spacing-8));
+    padding-bottom: var(--spacing-24);
+  }
+
+  .hero__actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+  }
+
+  .countdown {
+    padding: var(--spacing-4);
+  }
+
+  .countdown__grid {
+    gap: var(--spacing-2);
+  }
+
+  .countdown__key {
+    font-size: 0.78rem;
+  }
+
+  .section {
+    padding: var(--spacing-16) 0;
+  }
+
+  .pull-quote {
+    padding: var(--spacing-6) var(--spacing-5);
+    font-size: var(--font-size-lg);
+  }
+
+  .quote-stack figure {
+    padding: var(--spacing-5);
+  }
+
+  .memory-card {
+    padding: var(--spacing-5);
+  }
+
+  .memory-card.is-prev,
+  .memory-card.is-next {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+
+  .memory-nav {
+    gap: var(--spacing-3);
+  }
+
+  .final__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .intro-gate__cta {
+    width: 100%;
+    min-height: 56px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Navegación de escritorio con más enlaces (8 ítems)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .site-nav__list {
+    gap: 0;
+  }
+
+  .site-nav__link {
+    padding: var(--spacing-3) var(--spacing-2);
+    font-size: 0.82rem;
+    letter-spacing: 0.02em;
+  }
+
+  .site-nav__menu {
+    gap: var(--spacing-2);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Recuerdos 3D en pantallas medianas
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .memory-stage {
+    min-height: 380px;
+    overflow: hidden;
+  }
+
+  .memory-track {
+    min-height: 380px;
+  }
+
+  .memory-card.is-prev {
+    transform: rotateY(18deg) translateX(-26%) scale(0.9);
+  }
+
+  .memory-card.is-next {
+    transform: rotateY(-18deg) translateX(26%) scale(0.9);
+  }
+}
+
+@media (max-width: 640px) {
+  .memory-card.is-prev,
+  .memory-card.is-next {
+    transform: scale(0.94);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Sobre cerrado con lacre dorado">
+  <defs>
+    <linearGradient id="bg6" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#05070e"/>
+      <stop offset="55%" stop-color="#0b1424"/>
+      <stop offset="100%" stop-color="#152440"/>
+    </linearGradient>
+    <linearGradient id="env6" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0ebe1"/>
+      <stop offset="100%" stop-color="#d9d1c2"/>
+    </linearGradient>
+    <radialGradient id="glow6" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c9a84c" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg6)"/>
+  <ellipse cx="400" cy="330" rx="300" ry="220" fill="url(#glow6)"/>
+  <g transform="translate(400 310)">
+    <rect x="-230" y="-140" width="460" height="280" rx="16" fill="url(#env6)"/>
+    <path d="M-230 -124 L0 46 L230 -124" fill="none" stroke="#b8ad97" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M-230 140 L-70 6 M230 140 L70 6" fill="none" stroke="#c9bfa8" stroke-width="5" opacity="0.7"/>
+    <circle cx="0" cy="34" r="52" fill="#c9a84c"/>
+    <circle cx="0" cy="34" r="52" fill="none" stroke="#8a6d1f" stroke-width="4"/>
+    <text x="0" y="34" text-anchor="middle" dominant-baseline="central" font-family="Georgia, serif" font-size="38" font-weight="700" fill="#0b1424">9</text>
+  </g>
+  <g fill="#e8d5b7" opacity="0.75">
+    <path d="M140 120 l10 4 l-4 10 l-10 -4 z"/>
+    <path d="M660 156 l8 3 l-3 8 l-8 -3 z"/>
+    <circle cx="612" cy="470" r="4"/>
+    <circle cx="184" cy="452" r="3"/>
+  </g>
+</svg>

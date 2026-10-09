@@ -1,0 +1,32 @@
+{
+  "name": "9-de-octubre",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Micrositio de cumpleaños — experiencia cinematográfica con Vite, sin frameworks en runtime.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run build:config && npm run build:icons && vite build",
+    "preview": "vite preview",
+    "build:config": "node scripts/build-config.mjs",
+    "build:icons": "python scripts/generate_icons.py",
+    "build:fonts": "python scripts/build_fonts.py",
+    "build:audio": "python scripts/generate_audio.py",
+    "build:scenes": "python scripts/generate_scenes.py",
+    "publish:url": "node scripts/set-url.mjs",
+    "serve": "npm run preview",
+    "serve:backend": "python -m uvicorn backend.main:app --reload --port 8000",
+    "test": "npm run test:frontend && npm run test:backend",
+    "test:frontend": "node --test \"tests/frontend/*.test.mjs\"",
+    "test:backend": "python -m pytest backend/tests -q",
+    "audit": "python scripts/audit.py",
+    "qa": "node tests/frontend/qa.mjs tests/frontend/qa-browser.mjs",
+    "screenshots": "node tests/frontend/qa.mjs tests/frontend/screenshots.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "vite": "^8.3.3"
+  }
+}

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>9 de Octubre — Feliz Cumpleaños</title>
+  <meta name="description" content="Una experiencia digital de cumpleaños creada desde el corazón: una carta, un homenaje y una celebración para el 9 de octubre.">
+  <meta name="author" content="Creado con cariño">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#0a0f1a">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:title" content="9 de Octubre — Un Día Para Celebrarte">
+  <meta property="og:description" content="Una celebración digital premium, masculina y emocional para un cumpleaños especial.">
+  <meta property="og:image" content="https://laurette0205.github.io/9-de-octubre/assets/images/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="9 de Octubre — Un Día Para Celebrarte">
+  <meta name="twitter:description" content="Una celebración digital creada especialmente para ti.">
+  <meta name="twitter:image" content="https://laurette0205.github.io/9-de-octubre/assets/images/og-image.png">
+  <meta property="og:url" content="https://laurette0205.github.io/9-de-octubre/">
+  <meta name="twitter:url" content="https://laurette0205.github.io/9-de-octubre/">
+
+  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/icons/icon-152.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="canonical" href="https://laurette0205.github.io/9-de-octubre/">
+
+  <link rel="stylesheet" href="/assets/fonts/fonts.css">
+  <link rel="stylesheet" href="/src/css/variables.css">
+  <link rel="stylesheet" href="/src/css/base.css">
+  <link rel="stylesheet" href="/src/css/animations.css">
+  <link rel="stylesheet" href="/src/css/components.css">
+  <link rel="stylesheet" href="/src/css/sections.css">
+  <link rel="stylesheet" href="/src/css/responsive.css">
+
+  <script src="/js/theme-boot.js"></script>
+  <script type="module" src="/src/js/main.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+
+  <!-- 01 · INTRO: gate de entrada -->
+  <div class="intro-gate" id="intro-gate" role="dialog" aria-modal="true" aria-labelledby="intro-gate-title" hidden>
+    <div class="intro-gate__glow" aria-hidden="true"></div>
+    <div class="intro-gate__embers" aria-hidden="true"></div>
+    <div class="intro-gate__content">
+      <p class="intro-gate__kicker" data-render="gate.kicker">Una experiencia creada especialmente para ti…</p>
+      <p class="intro-gate__title" id="intro-gate-title" data-render="gate.title">Un día para celebrarte</p>
+      <p class="intro-gate__name" id="intro-gate-name" data-render="gate.name">Daniel</p>
+      <button class="btn btn-primary btn--pulse intro-gate__cta" id="intro-enter" type="button" data-render="gate.cta">
+        Entrar a tu regalo
+      </button>
+      <p class="intro-gate__hint" data-render="gate.hint">Sube el volumen: hay una canción esperándote.</p>
+    </div>
+  </div>
+
+  <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
+
+  <header class="site-header" id="site-header">
+    <nav class="site-nav container" aria-label="Navegación principal">
+      <a class="site-nav__brand" href="#inicio">
+        <span class="site-nav__mark" aria-hidden="true">09</span>
+        <span class="site-nav__brand-text" data-render="project.shortName">9 de Octubre</span>
+      </a>
+
+      <button class="site-nav__toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+        <span class="site-nav__toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="visually-hidden">Abrir menú</span>
+      </button>
+
+      <div class="site-nav__menu" id="nav-menu">
+        <ul class="site-nav__list" id="nav-list">
+          <li><a class="site-nav__link" href="#inicio" data-nav="inicio">Inicio</a></li>
+          <li><a class="site-nav__link" href="#gran-dia" data-nav="gran-dia">El gran día</a></li>
+          <li><a class="site-nav__link" href="#camino-ninja" data-nav="camino-ninja">Camino ninja</a></li>
+          <li><a class="site-nav__link" href="#capitulo" data-nav="capitulo">Contador</a></li>
+          <li><a class="site-nav__link" href="#recuerdos" data-nav="recuerdos">Recuerdos</a></li>
+          <li><a class="site-nav__link" href="#sorpresa" data-nav="sorpresa">Carta</a></li>
+          <li><a class="site-nav__link" href="#noche-estrellas" data-nav="noche-estrellas">Música</a></li>
+          <li><a class="site-nav__link" href="#final" data-nav="final">Final</a></li>
+        </ul>
+        <button class="btn btn-ghost site-nav__a11y" id="a11y-toggle" type="button" aria-expanded="false" aria-controls="a11y-panel">
+          <span aria-hidden="true">Aa</span>
+          <span class="visually-hidden">Abrir ajustes de lectura</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <aside class="a11y-panel" id="a11y-panel" aria-labelledby="a11y-panel-title" hidden>
+    <div class="a11y-panel__inner">
+      <div class="a11y-panel__head">
+        <h2 class="a11y-panel__title" id="a11y-panel-title" data-render="accessibility.panelTitle">Ajustes de lectura</h2>
+        <button class="a11y-panel__close" id="a11y-close" type="button">
+          <span aria-hidden="true">✕</span>
+          <span class="visually-hidden">Cerrar ajustes</span>
+        </button>
+      </div>
+
+      <div class="a11y-panel__group" role="group" aria-label="Tamaño de texto">
+        <span class="a11y-panel__label" id="font-size-label">Tamaño de texto</span>
+        <div class="a11y-panel__row">
+          <button class="btn btn-secondary" id="font-decrease" type="button" data-i18n="accessibility.labels.decrease">− Reducir texto</button>
+          <span class="a11y-panel__value" id="font-size-value" aria-live="polite">18 px</span>
+          <button class="btn btn-secondary" id="font-increase" type="button" data-i18n="accessibility.labels.increase">+ Aumentar texto</button>
+        </div>
+      </div>
+
+      <div class="a11y-panel__group" role="group" aria-label="Modos de visualización">
+        <span class="a11y-panel__label">Modos</span>
+        <div class="a11y-panel__chips">
+          <button class="chip-toggle" id="toggle-contrast" type="button" aria-pressed="false" data-i18n="accessibility.labels.contrast">Contraste alto</button>
+          <button class="chip-toggle" id="toggle-dark" type="button" aria-pressed="true" data-i18n="accessibility.labels.dark">Modo oscuro</button>
+          <button class="chip-toggle" id="toggle-reading" type="button" aria-pressed="false" data-i18n="accessibility.labels.reading">Modo lectura</button>
+          <button class="chip-toggle" id="toggle-motion" type="button" aria-pressed="false" data-i18n="accessibility.labels.motion">Reducir animaciones</button>
+        </div>
+      </div>
+
+      <button class="btn btn-ghost a11y-panel__reset" id="a11y-reset" type="button" data-i18n="accessibility.labels.reset">Restablecer ajustes</button>
+      <p class="a11y-panel__hint">Todos los ajustes se guardan en este dispositivo.</p>
+    </div>
+  </aside>
+
+  <main id="contenido-principal" tabindex="-1">
+
+    <!-- 02 · PRESENTACIÓN -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <canvas class="hero__canvas" id="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero__glow" aria-hidden="true"></div>
+
+      <div class="hero__content container">
+        <p class="hero__date reveal">9 DE OCTUBRE</p>
+
+        <h1 class="hero__title reveal" id="hero-title">Feliz cumpleaños.</h1>
+
+        <p class="hero__name reveal"></p>
+
+        <p class="hero__lead reveal">
+          Esta experiencia es para ti. Hoy no es un día cualquiera: hoy se celebra la vida de alguien increíble.
+        </p>
+
+        <div class="hero__actions reveal">
+          <a class="btn btn-primary" id="hero-cta" href="#gran-dia">Entrar a la celebración</a>
+          <a class="btn btn-secondary" href="#sorpresa">Abrir tu carta</a>
+        </div>
+
+        <p class="hero__tagline reveal" data-render="hero.tagline">Hoy comienza otro capítulo de tu historia.</p>
+      </div>
+
+      <a class="hero__scroll" href="#gran-dia" aria-label="Ir a la sección El gran día">
+        <span class="hero__scroll-line" aria-hidden="true"></span>
+        <span class="hero__scroll-text" data-render="hero.scrollHint">Desliza para descubrir</span>
+      </a>
+    </section>
+
+    <!-- EL GRAN DÍA -->
+    <section class="section section--intro" id="gran-dia" aria-labelledby="intro-title">
+      <div class="container narrow">
+        <header class="section-head reveal">
+          <p class="section-index"><span data-render="sections.intro.index">01</span> · <span data-render="sections.intro.knowledge">09 · 10</span></p>
+          <h2 class="section-title" id="intro-title" data-render="sections.intro.title">El gran día</h2>
+          <span class="section-rule" aria-hidden="true"></span>
+        </header>
+
+        <div class="prose" id="intro-prose">
+          <p class="loading-skeleton loading-skeleton--text" aria-hidden="true"></p>
+          <p class="loading-skeleton loading-skeleton--text" aria-hidden="true"></p>
+        </div>
+
+        <blockquote class="pull-quote reveal" data-render="sections.intro.pullQuote">
+          «Hoy no celebramos un número en el calendario. Celebramos que existas.»
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- 03 · MUNDO NINJA -->
+    <section class="section section--ninja" id="camino-ninja" aria-labelledby="ninja-title">
+      <div class="ninja__bg" aria-hidden="true"></div>
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-index" data-render="sections.naruto.index">02</p>
+          <h2 class="section-title section-title--display" id="ninja-title" data-render="sections.naruto.title">Camino ninja</h2>
+          <p class="section-subtitle" data-render="sections.naruto.subtitle">Para quien entiende que la grandeza se entrena en silencio.</p>
+          <span class="section-rule" aria-hidden="true"></span>
+        </header>
+
+        <ul class="ninja-strip" id="ninja-strip"></ul>
+
+        <div class="split">
+          <div class="split__body split__body--wide">
+            <ul class="value-chips reveal" id="ninja-values" aria-label="Valores de la sección"></ul>
+            <div class="quote-stack" id="ninja-quotes"></div>
+            <p class="split__note reveal" data-render="sections.naruto.intro">
+              Determinación. Disciplina. Valentía. Perseverancia. Compañerismo. Superación.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 · TU NUEVO CAPÍTULO -->
+    <section class="section section--chapter" id="capitulo" aria-labelledby="chapter-title">
+      <div class="chapter__glow" aria-hidden="true"></div>
+      <div class="container narrow">
+        <header class="section-head reveal">
+          <p class="section-index" data-render="sections.chapter.index">03</p>
+          <h2 class="section-title section-title--display" id="chapter-title" data-render="sections.chapter.title">Tu nuevo capítulo comienza</h2>
+          <p class="section-subtitle" data-render="sections.chapter.subtitle">La cuenta regresiva hacia tu día.</p>
+          <span class="section-rule" aria-hidden="true"></span>
+        </header>
+
+        <div class="countdown countdown--xl reveal" id="countdown" role="timer" aria-live="off" hidden>
+          <p class="countdown__label" id="countdown-label">Cuenta regresiva</p>
+          <div class="countdown__grid" id="countdown-grid">
+            <div class="countdown__unit"><span class="countdown__value" data-unit="days">00</span><span class="countdown__key">días</span></div>
+            <div class="countdown__unit"><span class="countdown__value" data-unit="hours">00</span><span class="countdown__key">horas</span></div>
+            <div class="countdown__unit"><span class="countdown__value" data-unit="minutes">00</span><span class="countdown__key">min</span></div>
+            <div class="countdown__unit"><span class="countdown__value" data-unit="seconds">00</span><span class="countdown__key">seg</span></div>
+          </div>
+          <p class="countdown__status" id="countdown-status"></p>
+        </div>
+
+        <p class="chapter__note reveal" data-render="sections.chapter.note">
+          Cuando el contador llegue a cero, todo esto se convierte en un recuerdo.
+        </p>
+      </div>
+    </section>
+
+    <!-- 05 · RECUERDOS 3D -->
+    <section class="section section--memories" id="recuerdos" aria-labelledby="memories-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-index" data-render="sections.memories.index">04</p>
+          <h2 class="section-title" id="memories-title" data-render="sections.memories.title">Recuerdos</h2>
+          <p class="section-subtitle" data-render="sections.memories.subtitle">Cuatro momentos que cuentan parte de tu historia.</p>
+          <span class="section-rule" aria-hidden="true"></span>
+        </header>
+
+        <div class="memory-stage reveal" id="memory-stage">
+          <ul class="memory-track" id="memory-track"></ul>
+        </div>
+
+        <div class="memory-nav">
+          <button class="btn btn-secondary" id="memory-prev" type="button">Anterior</button>
+          <p class="memory-counter" aria-live="polite">
+            <span id="memory-current">1</span> / <span id="memory-total">4</span>
+          </p>
+          <button class="btn btn-secondary" id="memory-next" type="button">Siguiente</button>
+        </div>
+
+        <p class="empty-state" id="memory-empty" hidden></p>
+      </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section class="section section--gallery" id="galeria" aria-labelledby="gallery-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-index" data-render="sections.gallery.index">05</p>
+          <h2 class="section-title" id="gallery-title" data-render="sections.gallery.title">Galería de recuerdos</h2>
+          <p class="section-subtitle" data-render="sections.gallery.subtitle">Momentos que merecen quedarse.</p>
+          <span class="section-rule" aria-hidden="true"></span>
+        </header>
+
+        <div class="gallery-filters" id="gallery-filters" role="group" aria-label="Filtrar galería por categoría"></div>
+
+        <ul class="gallery-grid" id="gallery-grid"></ul>
+
+        <div class="empty-state empty-state--box" id="gallery-empty" hidden>
+          <p class="empty-state__title" id="gallery-empty-title">Aún no hay fotos aquí</p>
+          <p class="empty-state__text" id="gallery-empty-text"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 · CARTA "PARA TI" -->
+    <section class="section section--surprise" id="sorpresa" aria-labelledby="surprise-title">
+      <div class="container narrow">
+        <header class="section-head reveal">
+          <p class="section-index" data-render="sections.surprise.index">06</p>
+          <h2 class="section-title section-title--display" id="surprise-title" data-render="sections.surprise.title">Para ti</h2>
+          <p class="section-subtitle" data-render="sections.surprise.subtitle">Hay una carta escrita a mano, esperando ser abierta.</p>
+          <span class="section-rule" aria-hidden="true"></span>
+        </header>
+
+        <div class="surprise reveal">
+          <p class="surprise__text" data-render="sections.surprise.lead">Todavía queda algo guardado solo para ti.</p>
+          <button class="btn btn-primary btn--pulse" id="surprise-trigger" type="button">
+            ABRIR CARTA
+          </button>
+          <button class="star-secret" id="secret-star" type="button">
+            <span aria-hidden="true">✦</span>
+            <span class="visually-hidden">Estrella secreta</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 · FRASES MOTIVACIONALES -->
+    <section class="section section--wishes" id="deseos" aria-labelledby="wishes-title">
+      <div class="wishes__embers" aria-hidden="true"></div>
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-index" data-render="sections.wishes.index">07</p>
+          <h2 class="section-title" id="wishes-title" data-render="sections.wishes.title">Frases para el camino</h2>
+          <p class="section-subtitle" data-render="sections.wishes.subtitle">Seis recordatorios para el fuego que llevas dentro.</p>
+          <span class="section-rule" aria-hidden="true"></span>
+        </header>
+
+        <ul class="wishes-grid" id="wishes-grid"></ul>
+        <p class="empty-state" id="wishes-empty" hidden></p>
+      </div>
+    </section>
+
+    <!-- 08 · MÚSICA -->
+    <section class="section section--stage" id="noche-estrellas" aria-labelledby="stage-title">
+      <div class="stage__lights" aria-hidden="true"></div>
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-index" data-render="sections.luisMiguel.index">08</p>
+          <h2 class="section-title section-title--display" id="stage-title" data-render="sections.luisMiguel.title">Noche de estrellas</h2>
+          <p class="section-subtitle" data-render="sections.luisMiguel.subtitle">Porque algunas celebraciones merecen su propia banda sonora.</p>
+          <span class="section-rule" aria-hidden="true"></span>
+        </header>
+
+        <div class="split split--reverse">
+          <figure class="split__media reveal">
+            <img id="stage-image" src="assets/images/scene-stage.svg" width="960" height="720" loading="lazy" decoding="async"
+                 alt="Escena original de escenario: una silueta con micrófono bajo conos de luz dorada y azul sobre fondo nocturno.">
+          </figure>
+
+          <div class="split__body">
+            <ul class="value-chips value-chips--gold reveal" id="stage-values" aria-label="Valores de la sección"></ul>
+            <div class="quote-stack" id="stage-quotes"></div>
+            <div class="stage__cta reveal">
+              <p class="stage__now" id="stage-now" data-render="sections.luisMiguel.now">Una canción para ti.</p>
+              <button class="btn btn-primary" id="stage-music-btn" type="button" hidden>Reproducir la banda sonora</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 · SORPRESA FINAL -->
+    <section class="section section--final" id="final" aria-labelledby="final-title">
+      <div class="final__burst" aria-hidden="true"></div>
+      <div class="container narrow final__inner">
+        <header class="section-head reveal">
+          <p class="section-index" data-render="sections.final.index">09</p>
+          <h2 class="section-title section-title--display" id="final-title" data-render="sections.final.title">Gracias por ser quien eres.</h2>
+          <span class="section-rule" aria-hidden="true"></span>
+        </header>
+
+        <p class="final__text reveal" data-render="sections.final.text">
+          Este pequeño rincón existirá siempre que quieras volver a él.
+        </p>
+        <p class="final__wish reveal" data-render="sections.final.wish">
+          Feliz cumpleaños. Que tu nuevo capítulo sea el mejor hasta ahora.
+        </p>
+
+        <div class="final__actions reveal">
+          <button class="btn btn-primary btn--pulse" id="final-replay" type="button" data-render="sections.final.replayLabel">
+            VOLVER A VER
+          </button>
+          <a class="btn btn-secondary" href="#inicio">Volver al inicio</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p class="site-footer__mark" data-render="footer.signature">09 · 10</p>
+      <p class="site-footer__message" data-render="footer.message">Hecho con tiempo, dedicación y cariño.</p>
+      <div class="site-footer__actions">
+        <button class="btn btn-secondary" id="share-btn" type="button" data-render="footer.shareLabel">Compartir</button>
+      </div>
+      <p class="site-footer__legal">Experiencia digital privada · Sin rastreo · Sin publicidad</p>
+    </div>
+  </footer>
+
+  <!-- Reproductor de música -->
+  <div class="music-player" id="music-player" hidden>
+    <button class="music-player__step" id="music-prev" type="button" aria-label="Canción anterior" title="Canción anterior">⏮</button>
+    <button class="music-player__toggle" id="music-toggle" type="button" aria-pressed="false">
+      <span class="music-player__icon" id="music-icon" aria-hidden="true">▶</span>
+      <span class="music-player__label" id="music-label">Reproducir</span>
+    </button>
+    <button class="music-player__step" id="music-next" type="button" aria-label="Canción siguiente" title="Canción siguiente">⏭</button>
+    <label class="music-player__volume">
+      <span class="visually-hidden">Volumen</span>
+      <span aria-hidden="true">🔊</span>
+      <input type="range" id="music-volume" min="0" max="100" value="70">
+    </label>
+    <p class="music-player__title" id="music-title">Banda sonora del día</p>
+    <p class="music-player__track" id="music-track"></p>
+  </div>
+
+  <!-- Carta sorpresa -->
+  <div class="letter-overlay" id="letter-overlay" hidden>
+    <div class="letter" role="dialog" aria-modal="true" aria-labelledby="letter-title" id="letter-dialog" tabindex="-1">
+      <span class="letter__seal" aria-hidden="true">09</span>
+      <h2 class="letter__title" id="letter-title">PARA TI</h2>
+      <div class="letter__body" id="letter-body"></div>
+      <p class="letter__signature" id="letter-signature"></p>
+      <p class="letter__final" id="letter-final"></p>
+      <button class="btn btn-primary" id="letter-close" type="button">Cerrar la carta</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  <div class="confetti-layer" id="confetti-layer" aria-hidden="true"></div>
+
+  <audio id="audio-player" preload="none"></audio>
+</body>
+</html>
