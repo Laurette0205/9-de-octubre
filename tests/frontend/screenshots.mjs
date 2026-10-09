@@ -78,7 +78,10 @@ export default async function run(page, ui) {
     if (width === 1440) {
       for (const [index, id] of ['capitulo', 'recuerdos', 'final'].entries()) {
         await page.evaluate((sectionId) => {
-          document.getElementById(sectionId)?.scrollIntoView({ block: 'start' });
+          const target = sectionId === 'recuerdos'
+            ? document.getElementById('memory-stage')
+            : document.getElementById(sectionId);
+          target?.scrollIntoView({ block: sectionId === 'recuerdos' ? 'center' : 'start' });
         }, id);
         await page.waitForTimeout(900);
         const file = path.join(OUT_DIR, `0${index + 3}-escena-${id}-${width}.png`);

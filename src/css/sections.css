@@ -567,6 +567,7 @@
 
 .memory-card {
   grid-area: 1 / 1;
+  z-index: 1;
   width: min(560px, 100%);
   padding: var(--spacing-6);
   border: 1px solid var(--color-border-subtle);
@@ -586,23 +587,33 @@
 }
 
 .memory-card.is-active {
+  z-index: 3;
   animation: memory-swap 520ms var(--ease-out) both;
   transform: rotateY(0deg) translateZ(0);
+  box-shadow: var(--shadow-xl), 0 32px 64px -24px rgba(0, 0, 0, 0.7);
 }
 
 .memory-card.is-prev {
-  transform: rotateY(26deg) translateX(-42%) scale(0.9);
-  opacity: 0.45;
-  filter: saturate(0.7);
+  z-index: 2;
+  transform: perspective(1400px) rotateY(24deg) translateX(-50%) scale(0.86);
+  opacity: 0.3;
+  filter: saturate(0.6) blur(1.5px);
 }
 
 .memory-card.is-next {
-  transform: rotateY(-26deg) translateX(42%) scale(0.9);
-  opacity: 0.45;
-  filter: saturate(0.7);
+  z-index: 2;
+  transform: perspective(1400px) rotateY(-24deg) translateX(50%) scale(0.86);
+  opacity: 0.3;
+  filter: saturate(0.6) blur(1.5px);
+}
+
+.memory-card.is-prev .memory-card__text,
+.memory-card.is-next .memory-card__text {
+  visibility: hidden;
 }
 
 .memory-card.is-hidden {
+  z-index: 0;
   opacity: 0;
   transform: scale(0.86);
   pointer-events: none;
